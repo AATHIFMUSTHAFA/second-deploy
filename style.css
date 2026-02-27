@@ -1,0 +1,202 @@
+/* @import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Nunito:wght@200..1000&family=Roboto+Condensed:wght@100..900&display=swap'); */
+
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --blue:#2e358f;
+    --red:#ec2427;
+    --border:.2rem solid rgba(0,0,0,1);
+    --box-shadow:0.5rem 1rem rgba(0,0,0,1);
+}
+
+*{
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: .2s linear;
+}
+body{
+  min-height: 100vh;
+  background-image: url(assets/007.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-padding-top:7rem;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header{
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  border: solid red;
+  border-radius: 5rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6%;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+}
+.btn{
+  display: inline-block;
+  margin-top: 1px;
+  border-radius: 20px;
+  /* border-color: navajowhite; */
+  background: var(--red);
+  color: white;
+  font-weight: 1000;
+  font-size: small;
+  cursor: pointer;
+  padding:.8rem 3rem;
+}
+.btn:hover{
+  background: var(--blue);
+}
+.header .btn{
+  margin-top: 0;
+
+}
+.header #btn-login i{
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+
+}
+
+
+/* .header :hover{
+  background-color: #666;
+} */
+
+/* LOGO CONTAINER */
+.logo-container{
+  display: flex;
+  /* text-align: center; */
+  align-items: center;   /* PERFECT ALIGNMENT*/
+  gap: 1px;
+}
+
+/* LOGO IMAGE */
+.header .logo-img{
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
+/* LOGO TEXT */
+.header .logo{
+  font-size: 2.5rem;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.header .logo span{
+  color: var(--red);
+}
+
+/* NAVBAR */
+.header .navbar a{
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--blue);
+  font-weight: 1000;
+}
+
+.navbar a:hover{
+    border-bottom: solid;
+    border-color: #ec2427;
+    color: #ec2427;
+    font-weight: bold;
+  }
+#menu-btn{
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+  display: none;
+
+}
+.background-img{
+  background-image: -moz-element();
+}
+
+
+
+
+
+
+
+/* media quaries */
+@media(max-width:991px){
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding: 2rem;
+  }
+  
+  
+
+  
+}
+@media(max-width:768px){
+
+  .header #btn-login i{
+    display: block;
+
+  }
+   .header #btn-login .btn{
+    display: none;
+  }
+
+  @media(max-width:768px){
+  .header .navbar {
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    right: 0;
+    background: #fff;
+    border-top: var(--border);
+    /* This creates the 'hidden' state */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.3s ease-in-out; /* Makes the opening smooth */
+  }
+
+  .header .navbar.active {
+    /* This creates the 'visible' state */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+  }
+}
+
+  .header .navbar a{
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  #menu-btn{
+    display: block;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180deg);
+}
+   
+}
+@media(max-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
+
