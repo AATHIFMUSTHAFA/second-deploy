@@ -241,6 +241,7 @@ nav a:hover{
     padding-left: 50PX; ;
     }
     .paragraph{
+    display: none;
     padding-left: 50px;
     /* font-size: medium; */
     font-weight: bold;
